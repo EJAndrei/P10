@@ -36,10 +36,10 @@ function Login() {
   return (
     <div className="login-bg">
   <Container className="text-center my-5">
-    <h1 style={{ color: '#FF8000', fontSize: '5rem', backgroundColor: '#EEEEEE', padding: '0.4rem' }}>
+    <h1 style={{ color: '#FF8000', fontSize: '5rem'  }}>
       Welcome to Carhartt Collection
     </h1>
-    <p style={{ color: '#FF8000', fontSize: '3rem', backgroundColor: '#EEEEEE', padding: '0.5rem' }}>
+    <p style={{ color: '#FF8000', fontSize: '3rem' }}>
       The best fits of Carhartt!
     </p>
   </Container>
