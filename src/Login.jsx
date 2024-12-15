@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { API_ENDPOINT } from './Api';
-import {jwtDecode} from 'jwt-decode';
+// import {jwtDecode} from 'jwt-decode';
 import './App.css';
 
 function Login() {
@@ -35,10 +35,14 @@ function Login() {
 
   return (
     <div className="login-bg">
-      <Container className="text-center my-5">
-        <h1>Welcome to Carhartt Collection</h1>
-        <p>The best fits of Carhartt!</p>
-      </Container>
+  <Container className="text-center my-5">
+    <h1 style={{ color: '#FF8000', fontSize: '5rem', backgroundColor: '#EEEEEE', padding: '0.4rem' }}>
+      Welcome to Carhartt Collection
+    </h1>
+    <p style={{ color: '#FF8000', fontSize: '3rem', backgroundColor: '#EEEEEE', padding: '0.5rem' }}>
+      The best fits of Carhartt!
+    </p>
+  </Container>
 
       <Container className="login-container">
         <Row className="justify-content-md-center">

@@ -1,34 +1,123 @@
+/* Navbar styling */
 .custom-navbar {
-  background-color: #8b5e34; /* Carhartt Brown */
+  background-color: #343a40; /* Dark gray */
+  padding: 10px;
 }
 
-.custom-navbar .navbar-brand,
-.custom-navbar .nav-link {
-  color: #f5f5f5 !important; /* Soft white for contrast */
-}
-
-.text-center {
-  color: #5a504f; /* Muted gray-brown */
-}
-
-.card {
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #e0d3c5; /* Light beige */
-}
-
-.card-title {
-  font-size: 1.25rem;
+.custom-navbar .navbar-brand {
+  color: #fff !important;
   font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.custom-navbar .nav-link {
+  color: #fff !important;
+  font-size: 1rem;
+  margin: 0 10px;
+}
+
+.custom-navbar .nav-link:hover {
+  text-decoration: underline;
+  color: #f0ad4e !important; /* Goldish highlight */
+}
+
+.custom-navbar .nav-dropdown-item {
+  color: #343a40;
+}
+
+.custom-navbar .nav-dropdown-item:hover {
+  background-color: #f8f9fa;
   color: #8b5e34; /* Carhartt Brown */
 }
 
-.card-text {
-  color: #5a504f; /* Muted gray-brown */
+/* Welcome Section */
+.text-center h1 {
+  color: #343a40;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.text-center p {
+  color: #6c757d;
+  font-size: 1.25rem;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #e0d3c5; /* Light beige */
+  overflow: hidden;
 }
 
 .card-img {
   height: 200px;
   object-fit: cover;
-  border: 1px solid #8b5e34; /* Subtle border in Carhartt Brown */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-title {
+  color: #8b5e34; /* Carhartt Brown */
+}
+
+/* Container and layout adjustments */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Spacing utilities */
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* Buttons in dropdown (Logout and others) */
+.nav-dropdown-item {
+  cursor: pointer;
+}
+
+.nav-dropdown-item:active {
+  background-color: #e0d3c5;
+}
+
+/* Custom Scrollbar for a polished look */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #8b5e34;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #5a504f;
 }

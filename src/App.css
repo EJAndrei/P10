@@ -9,107 +9,59 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: brightness(0.7); /* Slightly darker background to create contrast */
+  filter: brightness(0.8); /* Slightly darker background to create contrast */
 }
 
 .login-container {
-  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  background: rgba(238, 232, 232, 0.9); /* Slightly transparent white background */
   padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for light theme */
+}
+
+.text-center h1, .text-center p {
+  font-family: 'Jolly Lodger', cursive;
+}
+
+.login-card {
   border-radius: 10px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for light theme */
+  background-color: #ffffff;
 }
 
-.content {
-  padding: 2rem;
-  text-align: center;
-  font-family: 'Quintessential', cursive; /* Applying Quintessential font */
-}
-
-.text {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: #3e3228; /* Carhartt Brown */
-  font-family: 'Jolly Lodger', cursive; /* Applying Jolly Lodger font */
-}
-
-.field {
-  position: relative;
-  margin-bottom: 1.5rem;
-}
-
-.input {
-  width: 100%;
-  padding: 10px 10px 10px 40px;
-  border: 1px solid #8b5e34; /* Carhartt Brown border */
-  border-radius: 5px;
-  font-size: 1rem;
-  background-color: #f1e2b8; /* Soft beige for input background */
-  font-family: 'Quintessential', cursive; /* Applying Quintessential font */
-}
-
-.label {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  font-size: 0.9rem;
-  color: #5a504f; /* Muted gray-brown for the label */
-  font-family: 'Quintessential', cursive; /* Applying Quintessential font */
-}
-
-.span {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.forgot-pass {
-  margin-top: 1rem;
-  text-align: right;
-}
-
-.forgot-pass a {
-  color: #5a504f; /* Muted gray-brown for links */
-  text-decoration: none;
-  font-family: 'Quintessential', cursive; /* Applying Quintessential font */
-}
-
-.forgot-pass a:hover {
-  text-decoration: underline;
-  color: #3e3228; /* Carhartt Brown on hover */
-}
-
-.button {
-  width: 100%;
-  padding: 10px;
+.input-group .btn {
   background-color: #8b5e34; /* Carhartt Brown button */
+  color: white;
   border: none;
-  color: #fff;
-  font-size: 1rem;
+  font-family: 'Quintessential', cursive;
+}
+
+.input-group .btn:hover {
+  background-color: #6c4e2f;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.text-danger {
+  padding: 0.5rem;
+  border: 1px solid #e27a2d;
+  background-color: #fff4e6;
   border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Jolly Lodger', cursive; /* Applying Jolly Lodger font */
 }
 
-.button:hover {
-  background-color: #6c4e2f; /* Darker Carhartt Brown on hover */
+.btn-primary {
+  background-color: #8b5e34;
+  border: none;
+  font-family: 'Jolly Lodger', cursive;
 }
 
-.sign-up {
-  margin-top: 1.5rem;
-  text-align: center;
+.btn-primary:hover {
+  background-color: #6c4e2f;
+  transform: scale(1.05);
 }
 
-.sign-up a {
-  color: #8b5e34; /* Carhartt Brown for signup link */
-  text-decoration: none;
-  font-family: 'Quintessential', cursive; /* Applying Quintessential font */
-}
-
-.sign-up a:hover {
-  text-decoration: underline;
-  color: #6c4e2f; /* Darker Carhartt Brown on hover */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
 }

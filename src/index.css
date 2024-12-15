@@ -1,16 +1,16 @@
 /* Root Styles */
 :root {
-  --primary-color: #8b5e34; /* Carhartt Brown */
-  --secondary-color: #6c4e2f; /* Darker Carhartt Brown */
-  --light-background: #f1e2b8; /* Soft beige background */
-  --dark-background: #3e3228; /* Dark Carhartt Brown */
-  --text-color-light: #5a504f; /* Muted gray-brown text */
-  --text-color-dark: #ffffff; /* White text on dark background */
-  --button-background: #8b5e34; /* Carhartt Brown button */
-  --button-hover-color: #6c4e2f; /* Darker Carhartt Brown on hover */
-  --button-focus-color: -webkit-focus-ring-color;
-  --link-hover-color-light: #6c4e2f; /* Darker Carhartt Brown on hover */
-  --link-hover-color-dark: #5a504f; /* Muted gray-brown on hover */
+  --primary-color: #c8a276; /* Light Carhartt Brown */
+  --secondary-color: #a6875c; /* Softer Dark Carhartt Brown */
+  --light-background: #f8f3eb; /* Warm off-white background */
+  --dark-background: #e1d7cc; /* Soft taupe */
+  --text-color-light: #7c6e65; /* Muted taupe text */
+  --text-color-dark: #3e3228; /* Deep taupe text */
+  --button-background: #c8a276; /* Light Carhartt Brown button */
+  --button-hover-color: #a6875c; /* Softer Dark Carhartt Brown on hover */
+  --button-focus-color: rgba(200, 162, 118, 0.5); /* Soft focus ring */
+  --link-hover-color-light: #a6875c; /* Softer Dark Carhartt Brown on hover */
+  --link-hover-color-dark: #7c6e65; /* Muted taupe on hover */
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -19,9 +19,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   color-scheme: light dark;
-  background-color: var(--dark-background);
+  background-color: var(--light-background);
   color: var(--text-color-dark);
 }
 
@@ -42,7 +42,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--dark-background);
+  background-color: var(--light-background);
   color: var(--text-color-dark);
 }
 
@@ -50,7 +50,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: var(--primary-color); /* Carhartt Brown for headings */
+  color: var(--primary-color); /* Light Carhartt Brown for headings */
 }
 
 /* Button Styles */
@@ -63,11 +63,12 @@ button {
   font-family: inherit;
   background-color: var(--button-background);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
 
 button:hover {
   border-color: var(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
 button:focus,
@@ -87,6 +88,6 @@ button:focus-visible {
   }
 
   button {
-    background-color: #f9f9f9; /* Light gray background for button in light mode */
+    background-color: #f3e8dd; /* Softer beige background for button in light mode */
   }
 }
