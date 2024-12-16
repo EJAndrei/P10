@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,7 +8,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
-import { jwtDecode } from 'jwt-decode';
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -17,6 +17,10 @@ function Dashboard() {
     const fetchDecodeUserID = async () => {
       try {
         const token = JSON.parse(localStorage.getItem('token'))?.data?.token;
+        if (!token) {
+          navigate('/login');
+          return;
+        }
         const decodedToken = jwtDecode(token);
         setUser(decodedToken);
       } catch (error) {
@@ -46,7 +50,6 @@ function Dashboard() {
     { image: 'Carhartt Work Pants.jpg', title: 'Carhartt Work Pants', description: 'Dependable Carhartt pants for any task.' },
     { image: 'Carhartt Cargo Pants.jpg', title: 'Carhartt Cargo Pants', description: 'Carry more with Carhartt cargo pants.' }
 ];
-
 
   return (
     <>
